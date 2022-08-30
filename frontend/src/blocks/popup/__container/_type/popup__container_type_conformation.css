@@ -1,0 +1,13 @@
+.popup__container_type_conformation{
+  background: rgba(255, 255, 255, 0);
+  width: calc(100vw - 38px);
+  max-width: 430px;
+  min-height: 181px;
+}
+
+@media screen and (min-width: 1024px) {
+  .popup__container_type_conformation{
+      width: 430px;
+      min-height: 181px;
+  }  
+}

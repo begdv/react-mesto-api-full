@@ -1,0 +1,11 @@
+.info-popup{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 430px;
+  height: 330px;
+  box-sizing: border-box;
+  padding: 60px 36px;
+}

@@ -1,0 +1,11 @@
+.page__header{
+  margin: 0 auto 38.25px;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+}
+
+@media screen and (min-width: 1024px) {
+  .page__header{
+    margin: 0 auto 38px;
+    max-width: 880px;
+  }  
+}

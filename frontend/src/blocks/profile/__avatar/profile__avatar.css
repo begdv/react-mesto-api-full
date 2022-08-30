@@ -1,0 +1,26 @@
+.profile__avatar{
+  position: relative;
+  grid-row: 1 / span 2;
+  margin-bottom: 25px;
+}
+
+.profile__avatar:hover{
+  cursor: pointer;
+  opacity: 0.6;
+} 
+
+.profile__avatar:hover:before{
+  content: url(../../../images/profile/edit-avatar.svg);
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 13px);
+  left: calc(50% - 13px);
+  width: 26px;
+  height: 26px;
+} 
+
+@media screen and (min-width: 1024px) {
+  .profile__avatar{
+    margin: 0;
+  }  
+}

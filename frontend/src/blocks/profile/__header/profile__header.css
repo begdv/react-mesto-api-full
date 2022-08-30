@@ -1,0 +1,22 @@
+.profile__header{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+@media screen and (min-width: 1024px) {
+  .profile__header{
+    margin-top: 22px;
+    margin-bottom: 0;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-start;
+    max-width: calc(100vw - 750px);
+  }  
+}
+
+@media screen and (min-width: 1280px) {
+  .profile__header{
+    max-width: 530px;
+  }  
+}

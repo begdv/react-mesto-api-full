@@ -1,0 +1,10 @@
+.page__content{
+  margin: 0 19px;
+}
+
+@media screen and (min-width: 1024px) {
+  .page__content{
+    margin: 0 auto;
+    max-width: 880px;
+  }  
+}

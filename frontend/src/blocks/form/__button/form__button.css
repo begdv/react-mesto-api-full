@@ -1,0 +1,29 @@
+.form__button{
+  box-sizing: border-box;
+  margin: 0;
+  text-align: center;
+  height: 46px;
+  width: 100%;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  border-radius: 2px;
+  outline: none;
+  border: 0;
+}
+
+.form__button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}  
+
+@media screen and (min-width: 1024px) {
+  .form-button{
+    font-size: 18px;
+    line-height: 22px;
+    width: 358px;
+    height: 50px;
+  }  
+}

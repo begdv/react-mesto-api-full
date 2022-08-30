@@ -1,0 +1,29 @@
+.profile__add-mesto{
+  width: 100%;
+  height: 50px;
+  border: 2px solid #FFFFFF;
+  background: #000;
+  box-sizing: border-box;
+  border-radius: 2px;
+  max-width: 282px;
+  background-image: url(../../../images/profile/add-mesto.svg);
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
+.profile__add-mesto:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}  
+
+@media screen and (min-width: 1024px) {
+  .profile__add-mesto{
+    width: 150px;
+    height: 50px;
+    background-size: 22px 22px;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }  
+}

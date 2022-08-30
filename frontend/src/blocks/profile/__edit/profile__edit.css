@@ -1,0 +1,27 @@
+.profile__edit{
+  display: flex;
+  margin: 0 0 10px;
+  width: 18px;
+  height: 18px;
+  background: #000;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  background-image: url(../../../images/profile/edit-profile.svg);
+  background-size: 7.5px 7.5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: none;
+}
+
+.profile__edit:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}  
+
+@media screen and (min-width: 1024px) {
+  .profile__edit{
+    width: 24px;
+    height: 24px;
+    background-size: 10px 10px;
+  }  
+}

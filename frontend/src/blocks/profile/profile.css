@@ -1,0 +1,14 @@
+.profile{
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .profile{
+        display: grid;
+        grid-template-columns: 146.5px 1fr 150px;
+        grid-template-rows: 58px auto;
+        column-gap: 3.75px;
+        row-gap: 24px;
+        min-height: 120px;
+    }  
+  } 
