@@ -18,8 +18,6 @@
 
 http://begunovdv.students.nomoredomains.sbs/
 https://begunovdv.students.nomoredomains.sbs/
-http://84.252.137.43/
-https://84.252.137.43/
 
 **Автор**
 

@@ -5,6 +5,19 @@ const { createUser, login } = require('../controllers/auth');
 
 const { expressionLink } = require('../utils/const');
 
+router.post('/signin', celebrate({
+  body: Joi.object().keys({
+    email: Joi.string().email().required(),
+    password: Joi.string().required(),
+  }),
+}), login);
+
+router.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 router.post('/signup', celebrate({
   body: Joi.object().keys({
     email: Joi.string().email().required(),
@@ -14,12 +27,5 @@ router.post('/signup', celebrate({
     avatar: Joi.string().pattern(expressionLink),
   }),
 }), createUser);
-
-router.post('/signin', celebrate({
-  body: Joi.object().keys({
-    email: Joi.string().email().required(),
-    password: Joi.string().required(),
-  }),
-}), login);
 
 module.exports = router;
