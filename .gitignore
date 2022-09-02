@@ -19,5 +19,3 @@ build
 requests.http
 
 .env
-
-package-lock.json
