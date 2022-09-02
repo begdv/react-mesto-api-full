@@ -14,7 +14,11 @@
 
 Цель проекта - применение на практике полученных  знаний по разработке фронтенда и бэкенда для веб-приложений. 
 
-**Ссылки на GitHub Pages**
+**публичный IP-адрес сервера**
+
+84.252.137.43
+
+**Ссылки на страницу**
 
 http://begunovdv.students.nomoredomains.sbs/
 https://begunovdv.students.nomoredomains.sbs/
