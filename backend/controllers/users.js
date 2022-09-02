@@ -7,7 +7,7 @@ const BadRequestError = require('../errors/BadRequestError');
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
-    .then((users) => res.send({ data: users }))
+    .then((users) => res.send(users))
     .catch(next);
 };
 
@@ -17,7 +17,7 @@ module.exports.getUser = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('Пользователь c запрошенным id не найден');
       }
-      return res.send({ data: user });
+      return res.send(user);
     })
     .catch((err) => {
       if (err instanceof mongoose.Error.CastError) {
@@ -33,7 +33,7 @@ module.exports.getMe = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('Пользователь c запрошенным id не найден');
       }
-      return res.send({ data: user });
+      return res.send(user);
     })
     .catch(next);
 };
@@ -44,7 +44,7 @@ module.exports.updateMe = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('Пользователь c запрошенным id не найден');
       }
-      return res.send({ data: user });
+      return res.send(user);
     })
     .catch((err) => {
       if (err instanceof mongoose.Error.ValidationError) {
@@ -60,7 +60,7 @@ module.exports.updateMeAvatar = (req, res, next) => {
       if (!user) {
         throw new NotFoundError('Пользователь c запрошенным id не найден');
       }
-      return res.send({ data: user });
+      return res.send(user);
     })
     .catch((err) => {
       if (err instanceof mongoose.Error.ValidationError) {

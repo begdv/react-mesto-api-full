@@ -9,14 +9,14 @@ module.exports.getCards = (req, res, next) => {
   Card.find({})
     .populate('owner')
     .populate('likes')
-    .then((cards) => res.send({ data: cards }))
+    .then((cards) => res.send(cards))
     .catch(next);
 };
 
 module.exports.createCard = (req, res, next) => {
   const { name, link } = req.body;
   Card.create({ name, link, owner: req.user._id })
-    .then((card) => res.send({ data: card }))
+    .then((card) => res.send(card))
     .catch((err) => {
       if (err instanceof mongoose.Error.ValidationError) {
         return next(new BadRequestError('Переданы некорректные данные при создании карточки'));
@@ -37,7 +37,7 @@ module.exports.removeCard = (req, res, next) => {
       return Card.findByIdAndRemove(req.params.cardId)
         .populate('owner')
         .populate('likes')
-        .then((cardRemove) => res.send({ data: cardRemove }))
+        .then((cardRemove) => res.send(cardRemove))
         .catch(next);
     })
     .catch((err) => {
@@ -56,7 +56,7 @@ module.exports.addLike = (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Карточка c запрошенным id не найдена');
       }
-      return res.send({ data: card });
+      return res.send(card);
     })
     .catch((err) => {
       if (err instanceof mongoose.Error.ValidationError) {
@@ -77,7 +77,7 @@ module.exports.removeLike = (req, res, next) => {
       if (!card) {
         throw new NotFoundError('Карточка c запрошенным id не найдена');
       }
-      return res.send({ data: card });
+      return res.send(card);
     })
     .catch((err) => {
       if (err instanceof mongoose.Error.ValidationError) {

@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 
+const cors = require('cors');
+
 require('dotenv').config();
 
 const { errors } = require('celebrate');
@@ -18,6 +20,15 @@ const NotFoundError = require('./errors/NotFoundError');
 
 const { PORT = 3000 } = process.env;
 
+const corsOptions = {
+  origin: [
+    'https://begunovdv.students.nomoredomains.sbs',
+    'http://begunovdv.students.nomoredomains.sbs',
+    'http://localhost:3000',
+  ],
+  optionsSuccessStatus: 200,
+};
+
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/mestodb', {
@@ -25,6 +36,8 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 });
 
 app.use(helmet());
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
