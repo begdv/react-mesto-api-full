@@ -1,12 +1,12 @@
 export const configApi = {
-    url: 'http://localhost:3001/',
+    url: 'https://api.begunovdv.students.nomoredomains.sbs/',
     headers: {
       "content-type": "application/json",
     }
 };
 
 export const configApiAuth = {
-  url: 'http://localhost:3001/',
+  url: 'https://api.begunovdv.students.nomoredomains.sbs/',
   headers: {
     "content-type": "application/json",
   }
